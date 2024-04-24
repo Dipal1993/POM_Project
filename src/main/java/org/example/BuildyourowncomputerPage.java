@@ -18,7 +18,7 @@ public class BuildyourowncomputerPage extends Utils{
         clickOnElement(By.xpath("//input[@id='product_attribute_5_11']"));
         //Click on Add To Cart button
         clickOnElement(By.xpath("//button[@id='add-to-cart-button-1']"));
-        //call the explicitWaitMethod for loading element
+        //call the explicitWaitMethod for loading the shopping cart
         explicitWaitMethod(By.xpath("//*[@id='bar-notification']/div/p/a"));
         //click on shopping cart button from notification bar
         clickOnElement(By.xpath("//*[@id='bar-notification']/div/p/a"));
