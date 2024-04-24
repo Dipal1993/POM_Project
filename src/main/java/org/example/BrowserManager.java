@@ -1,5 +1,8 @@
 package org.example;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 import java.util.concurrent.TimeUnit;
 public class BrowserManager extends Utils{
     public  void openBrowser(){
@@ -7,8 +10,8 @@ public class BrowserManager extends Utils{
         driver = new ChromeDriver();
         //maximize the window
         driver.manage().window().maximize();
-        // Set the implicit wait time for the driver
-        driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+// explicit wait - to wait for element
+        wait = new WebDriverWait(driver, Duration.ofSeconds(30));
         //open the URL
         driver.get("https://demo.nopcommerce.com/");
     }

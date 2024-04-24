@@ -26,6 +26,8 @@ public class TestSuite extends BaseTest {
 
     @Test
     public void verifyusershouldregistersucessfully() {
+        //ImplicitWait
+        homePage.callImplicitWait();
         //click on Register button from homepage
         homePage.clickOnRegisterButton();
         //enter the registration details
@@ -36,6 +38,8 @@ public class TestSuite extends BaseTest {
 
     @Test
     public void verifyUserLoginSuccessfully() {
+        //ImplicitWait
+        homePage.callImplicitWait();
         //click on Register button from homepage
         homePage.clickOnRegisterButton();
         //enter the registration details
@@ -50,6 +54,8 @@ public class TestSuite extends BaseTest {
 
     @Test
     public void registeredUserReferProductsuccessfully() {
+        //ImplicitWait
+        homePage.callImplicitWait();
         //click on Register button from homepage
         homePage.clickOnRegisterButton();
         //enter the registration details
@@ -75,6 +81,8 @@ public class TestSuite extends BaseTest {
     }
     @Test
     public void userAddProductINShoppingCartSuccessfully() {
+        //ImplicitWait
+        homePage.callImplicitWait();
         //click on Register button from homepage
         homePage.clickOnRegisterButton();
         //enter the registration details

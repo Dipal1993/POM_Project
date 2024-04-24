@@ -16,6 +16,10 @@ import org.openqa.selenium.By;
     public  void clickOnElectronics(){
         clickOnElement(By.linkText("Electronics"));
     }
+    //callImplicitWait method
+    public void callImplicitWait(){
+        implicitWait();
+    }
     //click on Build Your Own Computer
     public void  clickOnBuildYourOwnComputer(){
         clickOnElement(By.linkText("Build your own computer"));
