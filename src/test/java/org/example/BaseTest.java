@@ -1,5 +1,7 @@
 package org.example;
 
+import org.testng.ITest;
+import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
@@ -10,8 +12,12 @@ import org.testng.annotations.BeforeMethod;
     public void setup(){
         browserManager.openBrowser();
     }
-   /* @AfterMethod
-    public  void tearDown(){
+   @AfterMethod
+    public  void tearDown(ITestResult result){
+        if(!result.isSuccess()){
+            takeScreenShort(result.getName());
+        }
+
         browserManager.closeBrowser();
-    }*/
+    }
 }

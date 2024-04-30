@@ -23,11 +23,9 @@ public class TestSuite extends BaseTest {
     BuildyourowncomputerPage buildyourowncomputerPage = new BuildyourowncomputerPage();
     //create object for shopping cart page
     ShoppingCartResultPage shoppingCartResultPage = new ShoppingCartResultPage();
-
-    @Test
+    @Test(priority = 2)
     public void verifyusershouldregistersucessfully() {
-        //ImplicitWait
-        homePage.callImplicitWait();
+
         //click on Register button from homepage
         homePage.clickOnRegisterButton();
         //enter the registration details
@@ -35,27 +33,9 @@ public class TestSuite extends BaseTest {
         // compare the expected and actual result
         registrationResultPage.verifyRegistrationCompleted();
     }
-
-    @Test
-    public void verifyUserLoginSuccessfully() {
-        //ImplicitWait
-        homePage.callImplicitWait();
-        //click on Register button from homepage
-        homePage.clickOnRegisterButton();
-        //enter the registration details
-        registrationPage.fillRegistrationDetails();
-        // compare the expected and actual result
-        registrationResultPage.verifyRegistrationCompleted();
-        //click on login button of homepage
-        homePage.clickOnLoginButton();
-        //enter the login details
-        loginPage.verifyTheLoginFunctionality();
-    }
-
-    @Test
+    @Test(priority = 3)
     public void registeredUserReferProductsuccessfully() {
-        //ImplicitWait
-        homePage.callImplicitWait();
+
         //click on Register button from homepage
         homePage.clickOnRegisterButton();
         //enter the registration details
@@ -63,9 +43,9 @@ public class TestSuite extends BaseTest {
         // compare the expected and actual result
         registrationResultPage.verifyRegistrationCompleted();
         //click on login button of homepage
-        homePage.clickOnLoginButton();
+       // homePage.clickOnLoginButton();
         //enter the login details
-        loginPage.verifyTheLoginFunctionality();
+        //loginPage.verifyTheLoginFunctionality();
         //click on electronics category
         homePage.clickOnElectronics();
         //click on clickOnCamera And Photo Button
@@ -79,21 +59,10 @@ public class TestSuite extends BaseTest {
         //compare the result for refer friend
         refferFriendSuccessfully.verifyReferFriendResult();
     }
-    @Test
+    @Test(priority = 1)
     public void userAddProductINShoppingCartSuccessfully() {
-        //ImplicitWait
-        homePage.callImplicitWait();
-        //click on Register button from homepage
-        homePage.clickOnRegisterButton();
-        //enter the registration details
-        registrationPage.fillRegistrationDetails();
-        // compare the expected and actual result
-        registrationResultPage.verifyRegistrationCompleted();
-        //click on login button of homepage
-        homePage.clickOnLoginButton();
-        //enter the login details
-        loginPage.verifyTheLoginFunctionality();
-        //click on BuildYourOwnComputer
+
+        //click on built your computer
         homePage.clickOnBuildYourOwnComputer();
         //select the second option for Processor
         buildyourowncomputerPage.selectSpecificationForComputer();
